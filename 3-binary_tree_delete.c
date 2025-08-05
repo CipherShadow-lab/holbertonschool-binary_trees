@@ -2,13 +2,13 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_delete: function deletes entire binary tree
- * @parent: pointer to root node of tree to delete 
+ * binary_tree_delete - function deletes entire binary tree
+ * @parent: pointer to root node of tree to delete
  *
  * Return: void
  */
 
-void *binary_tree_delete(binary_tree_t *tree)
+void binary_tree_delete(binary_tree_t *tree)
 {
 	if (tree == NULL)
 		exit(98);
