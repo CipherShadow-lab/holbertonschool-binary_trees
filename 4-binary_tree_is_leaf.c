@@ -2,8 +2,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_leaf: function inserts a leaf node to another node
- * @parent: pointer of node to check
+ * binary_tree_is_leaf - function inserts a leaf node to another node
+ * @node: pointer of node to check
  *
  * Return: 1 if node is leaf otherwise 0
  */
@@ -13,7 +13,7 @@ int binary_tree_is_leaf(const binary_tree_t *node)
 	if (node == NULL)
 		return (0);
 
-	if (node-> == NULL && node->right == NULL)
+	if (node->left == NULL && node->right == NULL)
 	{
 		return (1);
 	}
