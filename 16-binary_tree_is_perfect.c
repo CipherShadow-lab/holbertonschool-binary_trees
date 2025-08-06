@@ -2,10 +2,10 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_perfect - function checks if binary tree is perfect
+ * tree_height - function checks height of binary tree
  * @tree: pointer to root node of tree to check
  *
- * Return: 1 if tree is perfect, otherwise 0
+ * Return: height of binary tree
  */
 
 size_t tree_height(const binary_tree_t *tree)
@@ -25,6 +25,13 @@ size_t tree_height(const binary_tree_t *tree)
 		return (1 + right);
 }
 
+/**
+ * binary_tree_is_perfect - function checks if binary tree is perfect
+ * @tree: pointer to root node of tree to check
+ *
+ * Return: 1 if tree is perfect otherwise 0
+ */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t left_height = 0;
@@ -40,7 +47,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (1);
 	}
 
-	if (tree->left == NULL || tree-> right == NULL)
+	if (tree->left == NULL || tree->right == NULL)
 		return (0);
 
 	left_height = tree_height(tree->left);
